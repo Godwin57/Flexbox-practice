@@ -16,6 +16,7 @@ a{
 body, .header-container{
     display: flex;
     flex-direction: column;
+    font-family: roboto, sans-serif;
 }
 
 header, footer{
@@ -57,18 +58,13 @@ header{
     display: flex;
     gap: 50px;
 }
-
 .header-content .left, .header-content .right{
     width: 48%;
+    margin-bottom: 10px;
 }
 
-.header-content .right{
-    background: #e5e7eb88;;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #E5E7EB;
-    font-size: 18px;
+img{
+    border-radius: 8px;
 }
 
 .left .bold{
@@ -93,6 +89,10 @@ button{
     border-radius: 5px;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .last-container button{
     border: 1px solid white;
 }
@@ -101,6 +101,7 @@ button{
     font-size: 36px;
     color: #1F2937;
     font-weight: 900;
+    text-align: center;
 }
 
 main{
@@ -117,6 +118,7 @@ main section{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    gap: ;
 }
 
 .gallery img{
@@ -149,9 +151,11 @@ main section{
 }
 
 .quote{
-    width: 890px;
+    box-sizing: border-box;
+    padding: 10px 60px;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .speaker{
@@ -194,4 +198,29 @@ footer{
     color: #E5E7EB;
     font-size: 18px;
     padding: 10px 0;
+}
+
+@media (max-width: 760px) {
+    .header-nav{
+        gap: 50px;
+    }
+
+    .header-content{
+        flex-direction: column;
+    }
+
+    .header-content .left, .header-content .right{
+        width: 100%;
+    }
+
+    .one{
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 615px) {
+    .header-nav{
+        flex-direction: column;
+        gap: 20px;
+    }
 }
